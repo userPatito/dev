@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DEVFEST">
+  <meta name="author" content="CNSE">
+  <title>DevFest 2016</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet"> 
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="style/mystyle.css" rel="stylesheet">
+  <link href="bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet"> 
+  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="css/flipclock.css" />
+  <link rel="stylesheet" href="css/mis-estilos.css">
+
+<!-- Formulario -->
+
+ 
+  <link href="form/bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet"> 
+  <link href="form/bower_components/jasny-bootstrap.min.css" rel="stylesheet">  
+  <link href="form/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+  <link href="form/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet"> 
+  <!-- Plugins -->
+  <script type="form/node_modules/angular/angular.min.js"></script>
+  <script src="form/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="form/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="form/bower_components/sweetalert/dist/sweetalert.min.js"></script>          
+  <script src="form/bower_components/jasny-bootstrap.min.js"></script> 
+  <script src="form/scripts/form.js"></script>
+
+
+
+  <!-- Plugins -->
+  <script type="node_modules/angular/angular.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+  <script src="total_a_pagar.js"></script>
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAsitT03yx2lVbbmohT_Ewh5ikGNcZUPc&callback=initMap"
+  type="text/javascript"></script>
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/devfest.ico">
+</head><!--/head-->
+
+<body>
+
+  <!--.preloader-->
+  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
+  <!--/.preloader-->
+
+  <header id="home">
+    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active" style="background-image: url(images/slider/1.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">Bienvenido <span>DEVFEST 2016</span></h1>
+            <p class="animated fadeInRightBig">Faltan</p>
+            <a data-scroll class="btn btn-reloj animated fadeInUpBig" href="#services"><div id="mi-reloj"></div></a>
+            </div>   
+        </div>
+
+        <div class="item" style="background-image: url(images/slider/2.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">¡Hola! <span>Te estamos Esperando </span></h1>
+            <p class="animated fadeInRightBig">¡Ya Falta Poco!</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">continuemos</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/3.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">Somos <span>GDG LA PAZ BOLIVIA</span></h1>
+            <p class="animated fadeInRightBig">Participa Junto a Nosotros</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">sigamos</a>
+          </div>
+        </div>
+      </div>
+      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+
+      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
+
+    </div><!--/#home-slider-->
+    <div class="main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Naveguemos</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
+          </a>                    
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">                 
+            <li class="scroll active"><a href="#home">Inicio</a></li>
+            <li class="scroll"><a href="#services">DEVFEST 2016</a></li> 
+            <li class="scroll"><a href="#about-us">Quienes Somos</a></li>
+            <li class="scroll"><a href="#call4syp">Call4S&P</a></li>                     
+            <li class="scroll"><a href="#pricing">Precios</a></li>
+            <li class="scroll"><a href="#contact">Consultas</a></li>
+            <li><a type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#registro" id="iniciarRegistro" style="background-color: #ffa700"><strong>Regístrate</strong></a></li>      
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+  </header><!--/#home-->
+
+ 
+
+  <section id="services">
+    <div class="container">
+      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <br><br><br><br><br><br>
+      <font color=#017fb5 face="Open Sans" size="70"><p align="center"><strong>GDG DevFest</strong></p></font>
+      <br>
+         <font color=#017fb5 face="Open Sans" size="70"><p align="center"><strong>2016</strong></p></font>
+        <div class="row">
+          <div class="text-center col-sm-8 col-sm-offset-2">
+          <br>
+            <p>Con el Google Developer Fest, el GDG La Paz se une a más de 400 ciudades que replicarán localmente la experiencia alrededor del mundo, en Sudamérica incluye a ciudades como Bogotá, Lima, Asunción, Santiago, Santa Fé, Sao Paulo y Porto Alegre entre otras. 
+            </p>
+            <h2>Objetivo</h2>
+            <p>Principal objetivo es comunicar, compartir e incentivar el intercambio de conocimiento entre novatos, entusiastas, desarrolladores, líderes de proyectos y organizaciones en general, interesadas en utilizar tecnologías de Google en La Paz y toda Bolivia.</p>
+            <h2>Audiencia</h2>
+            <p>Esperamos 350 participantes entre organizaciones, tecnólogos, desarrolladores, estudiantes, profesionales, diseñadores y fans de la tecnología.</p>
+            <br><br><br>
+           <p>Muy pronto más informacion, espérala!</p>
+          </div>
+        </div> 
+      </div>      
+  </section><!--/#services-->
+  <section id="about-us" class="parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2>¡UNETENOS!</h2>
+              
+        </div>
+        </section><!--/#about-us-->
+
+ <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+        <br>
+          <IMG SRC="images/gde_logo.png" >
+          <br><br>
+          <h2>Acerca de los GDEs</h2>
+           <p>Google Developer Expert (GDE) es título reconoce los desarrolladores destacados que exhiben una gran experiencia en una o más tecnologías de Google y comparten esta experiencia con la comunidad de desarrolladores .</p>
+          <p>Nuestros invitados de este año vienen de muchos lugares, esperamos que explotes y aproveches su conocimiento</p>
+        </div>
+      </div>
+      <div class="team-members">
+        <div class="row">
+         <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+                <img class="img-responsive" src="images/team/1.jpg" alt="">
+              </div>
+              <div class="member-info">
+                <h3>Enrique Díaz</h3>
+                <h4>GDE: Android</h4>
+                <h4>Ixtapaluca, México</h4>
+                <p>Habilidades:
+            
+                  <p>● Androide</p>
+                  <p>● Desarrollo de productos</p>
+                  <p>● Salida al mercado Estrategia</p>
+                  <p>● El espíritu empresarial.</p>    
+                </p>
+              </div>
+              <div class="social-icons">
+                <ul>
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <div class="member-image">
+                <img class="img-responsive" src="images/team/2.jpg" alt="">
+              </div>
+              <div class="member-info">
+                <h3>Mauricio Angulo S.</h3>
+                <h4>UX/UI Expert: User Research, Interaction Design  &amp; Visual Design</h4>
+                <h4>Mexico DF, Mexico</h4>
+                <p>Habilidades:
+            
+                  <p>● UX Google certificada Sprint Maestro</p>
+                  <p>●  Diseño móvil Optimización</p>    
+                  <p>●  Investigación y Pruebas de usuario</p>
+                  <p>●  Patrón de diseño interactivo</p>
+                  <p>●  Desarrollo de contenido y Materiales</p>
+                  <p>●  Pruebas A / B</p>
+                  <p>●  Prototipado y Creatividad</p>
+                </p>
+              </div>
+              <div class="social-icons">
+                <ul>
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+        <br> <br>
+        <font color=#017fb5 face="Open Sans" size="70"><p align="center"><strong>GDG La Paz</strong></p></font>
+          
+        <br>
+          <p>Google Developer Groups (GDGs) somos grupos de desarrolladores interesados en tecnologías Google; desde las plataformas Android, App Engine, y Google Chrome, hasta APIs de productos como Maps API, YouTube API y Google Calendar API entre otras.
+          </p>
+          <p>El GDG La Paz es el Google Developer Group La Paz, capitulo oficial del programa para desarrolladores Google</p>
+          <p>El GDG La Paz, se forma para conectar a las personas interesadas en el desarrollo de: </p>
+           
+           <p> Aplicaciones móviles para la plataforma Android</p>
+           <p>  Aplicaciones empresariales para Google Apps Marketplace </p>
+           <p> Aplicaciones sociales para la plataforma Google+</p>
+           <p>  Iniciativas de software libre apoyadas por Google</p>
+           <p> Aplicaciones web empleando las tecnologías y APIs de Google.</p>
+           
+<p>El grupo está abierto a todas las personas con inquietud de aprender sobre tecnologías Google. Periódicamente el GDG La Paz organiza eventos y actividades en distintas universidades de la ciudad con el objetivo de generar innovación en nuestro país a través del uso de tecnologías Google para desarrolladores.</p>
+
+<p>La membresía y todas las actividades que realiza el GDG La Paz son sin fines de lucro.</p>
+        </div>
+      </div>
+    </div>
+        <div class="container text-center">
+        <div class="social-icons">
+          <ul>
+             <li><a class="envelope" href="https://plus.google.com/u/0/+GDGBolivia"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> 
+            <li><a class="facebook" href="https://www.facebook.com/GDG.bo/?fref=ts"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    
+  </section><!--/#team-->
+
+  <section id="features" class="parallax">
+    <div class="container">
+      <div class="row count">
+        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <i class="fa fa-user"></i>
+          <h3 class="timer">400</h3>
+          <p>Asistentes el año pasado</p>
+        </div>
+        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+          <i class="fa fa-desktop"></i>
+          <h3 class="timer">15</h3>                    
+          <p>eventos este año</p>
+        </div> 
+        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="700ms">
+          <i class="fa fa-trophy"></i>
+          <h3 class="timer">19</h3>                    
+          <p>Puesto de Bolivia</p>
+        </div> 
+        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="900ms">
+          <i class="fa fa-comment-o"></i>                    
+          <h3>24/7</h3>
+          <p>Sigamos en contacto</p>
+        </div>                 
+      </div>
+    </div>
+  </section><!--/#features--> 
+
+<section id="call4syp">
+  <div class="container">
+    <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <br>
+      <p align="center"> <Strong><font color=#028FCC size="100%">CALL 4 Projects</font></strong></p><br>
+      <p align="center"> <Strong><font color=#028FCC size="100%">&</font></strong></p><br>
+      <p align="center"> <Strong><font color=#028FCC size="100%">Speakers</font></strong></p>
+      <br><br>
+      <p align="center">Haz click sobre cada imagen para acceder a los formularios. ¡Anímate!</p>
+      <p align="center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeAu-R6ucvJyV-w5TXpJYK3e3GtkJon6MtqJ0uiAz2Sbz-8kQ/viewform?c=0&w=1"><IMG SRC="images/callprojects.jpg"></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqR01_yNaX2fYWfHeBnMfp6dbMbrkaV9LFxEhjD0ly1puCsg/viewform"><IMG SRC="images/callspeakers.jpg"></a></p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <font color=#017fb5 face="Open Sans" size="70"><p align="center"><strong>Precios</strong></p></font><br>
+          <p>Tenemos 2 precios para que puedas acompañarnos en este evento</p>
+          <p> <strong>Aprovecha el Promocional</strong></p>
+        </div>
+      </div>
+      <div class="pricing-table">
+        <div class="row"> 
+         <div class="col-sm-3">
+            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <h3>ESTUDIANTE</h3>
+              <div class="price">
+                35 Bs<span>/Estudiante </span>
+                <br> <span> <Strong><font color=#017FB5>PROMOCIONAL</font></strong></span>                           
+              </div>
+              <ul>
+                <li>Acceso a Codelabs</li>
+                <li>Acceso a Conferencias</li>
+                <li>Souvenirs del evento</li>
+                <li>Credencial</li>
+                <li>Refrigerio</li>
+                <li>OJO SE CONTROLARÁ MATRICULA</li>
+              </ul>
+              <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#registro" id="iniciarRegistro" style="background-color: #028FCC"><font color=#fff>Regístrate</font></button>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="single-table wow flipInY" data-wow-duration="1300ms" data-wow-delay="800ms">
+              <h3>PROFESIONAL</h3> 
+              <div class="price">
+                50 Bs<span>/Persona</span>  
+                <br> <span> <Strong><font color=#017FB5>PROMOCIONAL</font></strong></span>                         
+              </div>
+              <ul>
+                <li>Acceso a Codelabs</li>
+                <li>Acceso a Conferencias</li>
+                <li>Souvenirs del evento</li>
+                <li>Credencial</li>
+                <li>Refrigerio</li>
+                <li></li>
+                <br>
+              </ul>
+              <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#registro" id="iniciarRegistro" style="background-color: #028FCC"><font color=#fff>Regístrate</font></button>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="single-table featured wow flipInY" data-wow-duration="1500ms" data-wow-delay="1100ms">
+              <h3>ESTUDIANTE</h3>
+              <div class="price">
+                45 Bs<span>/Estudiante</span>  
+                <br>                              
+              </div>
+              <ul>
+                <li>Acceso a Codelabs</li>
+                <li>Acceso a Conferencias</li>
+                <li>Souvenirs del evento</li>
+                <li>Credencial</li>
+                <li>Refrigerio</li>
+                <li>OJO SE CONTROLARÁ MATRICULA</li>
+                <br>
+              </ul>
+             <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#registro" id="iniciarRegistro" style="background-color: #fff"><font color=#028FCC>Regístrate</font></button>
+            </div>
+          </div>
+         <div class="col-sm-3" >
+            <div class="single-table wow flipInY" data-wow-duration="1700ms" data-wow-delay="1300ms"style="background-color: #028FCC; color: #fff">
+             <h3><font color=#fff>PROFESIONAL</font></h3>
+              <div class="price">
+                60 Bs<span>/Persona</span>    
+                <br>                  
+              </div>
+              <ul>
+                <li>Acceso a Codelabs</li>
+                <li>Acceso a Conferencias</li>
+                <li>Souvenirs del evento</li>
+                <li>Credencial</li>
+                <li>Refrigerio</li>
+                <li></li>
+                <br><br>
+              </ul>
+              <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#registro" id="iniciarRegistro" style="background-color: #fff"><font color=#028FCC>Regístrate</font></button>
+            </div>
+          </div>  
+      </div>
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <br><br><br>
+          <p><strong>*Los precios Promocionales estarán disponibles hasta el 1 de noviembre de 2016</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <font color=#017fb5 face="Open Sans" size="70"><p align="center"><strong>INSCRIPCION</strong></p></font><br>
+          <p>Para tu inscripción y de acuerdo al tipo de entrada que corresponda debes de realizar un deposito a las siguientes cuentas: </p>
+        </div>
+      </div>
+      <div class="pricing-table">
+        <div class="row"> 
+         
+          <div class="col-sm-6">
+            <div class="single-table wow flipInY" data-wow-duration="1300ms" data-wow-delay="800ms">
+              <h3>BANCO UNION</h3> 
+              <div class="price" class="dep">
+                <span><font color=#017FB5 >10000011332933</font></span>                          
+              </div>
+              <ul>
+                <li>La cuenta se encuentra a nombre de:</li>
+                <li>Henry Alejandro Taby Zenteno</li>
+                <li>¡Cuida bien tu comprobante!</li> 
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="single-table featured wow flipInY" data-wow-duration="1500ms" data-wow-delay="1100ms">
+              <h3>BANCO BISA</h3>
+              <div class="price">
+               <span>515747-401-6</span>  
+                <br>                              
+              </div>
+              <ul>
+                <li>La cuenta se encuentra a nombre de:</li>
+                <li>Andrés Horacio Vásquez Agramont</li>
+                <li>¡Cuida bien tu comprobante!</li>
+              </ul>
+            </div>
+          </div>  
+          <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <br><br><br>
+          <p><strong>*Una vez hecho tu depósito vuelve aqui y haz click en la sección REGISTRATE para completar tu Registro</strong></p>
+        </div>
+      </div> 
+
+    </div>
+    <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+               <h3>Regístrate para el DevFest 2016</h3>
+               <h4>Todos los campos con <span style="color:rgb(250, 0, 0)">*</span> son obligatorios</h4>
+            </div> 
+            <div class="modal-body">
+            <form class="form-horizontal form-datos" data-action="//localhost/dev_fest/participantes/registrar" method="POST" enctype="multipart/data-form" >
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-10">
+                    <h3>Información personal</h3>
+                  </div>
+                  <p style="padding:25px;"></p>
+                  <div class="form-group">
+                    <label for="nombre" class="col-xs-12 col-sm-4 control-label">Escribe tu nombre <span style="color:rgb(250, 0, 0)">*</span></label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="apat" class="col-xs-12 col-sm-4 control-label">Escribe tu apellido paterno </label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="text" class="form-control" id="apat" name="apat" placeholder="Tu apellido paterno">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="amat" class="col-xs-12 col-sm-4 control-label">Escribe tu apellido materno</label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="text" class="form-control" id="amat" name="amat" placeholder="Tu apellido materno">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="ci" class="col-xs-12 col-sm-4 control-label">Escribe tu carnet de identidad <span style="color:rgb(250, 0, 0)">*</span></label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="text" class="form-control" id="ci" name="ci" placeholder="Tu carnet de identidad" required>
+                    </div>
+                  </div>
+                  <div class="form-group"> 
+                    <label for="mail" class="col-xs-12 col-sm-4 control-label">Escribe tu correo electrónico <span style="color:rgb(250, 0, 0)">*</span></label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="email" class="form-control" id="mail" name="mail" placeholder="Tu correo electrónico" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="cel" class="col-xs-12 col-sm-4 control-label">Escribe tu número de celular</label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="text" class="form-control" id="cel" name="cel" placeholder="Tu número de celular">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="tipo" class="col-xs-12 col-sm-4 control-label">Escoje tu tipo <span style="color:rgb(250, 0, 0)">*</span></label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="radio"  id="estudiante" name="tipo" value="estudiante" required> Estudiante
+                      <input type="radio"  id="profesional" name="tipo" value="profesional"> Profesional
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="evento" class="col-xs-12 col-sm-4 control-label">Evento</label>
+                    <div class="col-xs-12 col-sm-8">
+                      <input type="text" class="form-control" id="evento" name="evento" value="DevFest - 2016" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="promocion" class="col-xs-12 col-sm-4 control-label">Precio entrada</label>
+                    <div class="col-xs-12 col-sm-3">
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Bs.</span>
+                        <input type="text" class="form-control" id="precio" name="precio" value="0" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div id="pago">
+                    <hr>
+                    <div class="col-xs-12 col-sm-10">
+                      <h3 class="modal-title">Información de pago</h3>
+                    </div>  
+                    <p style="padding:20px;"></p>
+                    <div class="form-group">
+                      <label for="banco" class="col-xs-12 col-sm-4 control-label">Selecciona el banco en el que pagaste <span style="color:rgb(250, 0, 0)">*</span></label>
+                      <div class="col-xs-12 col-sm-8">
+                        <input type="radio" id="banco" name="banco" value="BNB" required> BNB
+                        <input type="radio" id="banco" name="banco" value="Mercantil Santa Cruz"> Mercantil Santa Cruz
+                        <input type="radio" id="banco" name="banco" value="BCP"> BCP
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="souvenir" class="col-xs-12 col-sm-4 control-label">¿Deseas algún souvenir?</label>
+                      <div class="col-xs-12 col-sm-8">
+                        <input type="checkbox" id="taza" name="taza" value="1"> Taza
+                        <input type="checkbox" id="polera" name="polera" value="2"> Polera
+                      </div>
+                    </div>
+                    <div class="form-group" id="tallaDiv">
+                      <label for="talla" class="col-xs-12 col-sm-4 control-label">Escoja su talla</label>
+                      <div class="col-xs-12 col-sm-8">
+                        <select id="talla" name="talla">
+                          <option value="S">S</option>
+                          <option value="M">M</option>
+                          <option value="XL">XL</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="souvenir" class="col-xs-12 col-sm-4 control-label">Sube la fotografía de tu recibo <span style="color:rgb(250, 0, 0)">*</span></label>
+                      <div class="col-xs-12 col-sm-8">
+                        <div class="foto-block">
+                                          <div class="fileinput fileinput-new" data-provides="fileinput">
+                                              <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 250px; height: 200px;">
+                                                  <img src="">
+                                              </div>
+                                              <div>
+                                                  <span class="btn btn-default btn-file btn-block">
+                                                      <span class="fileinput-new">Seleccionar imagen</span>
+                                                      <span class="fileinput-exists">Cambiar</span>
+                                                      <input type="file" id="foto" name="foto" class="fotografia" id="foto" required>
+                                                      <input type="hidden" name="img_bd" id="img_bd" value="">
+                                                  </span>
+                                                  <a href="#" class="btn btn-default btn-block fileinput-exists" data-dismiss="fileinput">Remover imagen</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                           </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="recibo" class="col-xs-12 col-sm-4 control-label">Código de recibo <span style="color:rgb(250, 0, 0)">*</span></label>
+                      <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" id="recibo" name="recibo" required>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                    <div class="row">
+                      <div class="col-xs-8" >
+                        <strong class="text-center">Total a pagar: Bs. <span id="total"> 0</span> </strong>
+                      </div>
+                      <div class="col-xs-12"> 
+                        <button type="button" class="btn btn-primary btn-block" id="subirRegistro"><i class="fa fa-check-circle-o"></i> Regístrate</button>
+                        <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal"> Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+ </section><!--/#pricing-->
+  
+<section id="contact">
+<br>
+ <h1><a href="#">Este año el DevFest será en: <Strong>Universidad La Salle</Strong> </a></h1><br>
+    <div id="google-map" class="wow fadeIn" data-latitude="-16.523611" data-longitude="-68.091459" data-wow-duration="2000ms" data-wow-delay="1000ms"></div> 
+     <div id="contact-us" class="parallax">
+      <div class="container">
+        <div class="row">
+          <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2>¿Alguna duda? Escríbenos</h2>
+            <p>No te olvides que esperamos que te inscribas, muy pronto te ofreceremos más información</p>
+          </div>
+        </div>
+        <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+          <div class="row">
+            <div class="col-sm-6">
+              <form id="main-contact-form" name="contact-form" method="post" action="/sendemail.php">
+
+                <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control" placeholder="Nombre Completo" required="required">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="subject" class="form-control" placeholder="Breve descripcion" required="required">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Tu duda o Comentario" required="required"></textarea>
+                </div>                        
+                <div class="form-group">
+                  <button type="submit" class="btn-submit">Enviar y contéstenme</button>
+                </div>
+              </form>   
+            </div>
+            <div class="col-sm-6">
+              <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <p>GDG La Paz tomara en cuenta tu participacion para próximos eventos, te invitamos cordialmente a formar parte de nuestro grupo</p>
+                <ul class="address">
+                  <li><i class="fa fa-map-marker"></i> <span> Dirección Evento:</span> Av. Jorge Carrasco Esq. Las Palmas Nº450, Bolognia, La Paz, Bolivia </li>
+                  <li><i class="fa fa-phone"></i> <span> Teléfono Consultas:</span> 60507900 (Andrés)</li>
+                  <li><i class="fa fa-envelope"></i> <span> Email:       </span><span>gdg.bolivia@gmail.com</span></li>
+                  <li><i class="fa fa-globe"></i> <span> Página Web:    </span> <a href="#">www.devfest.xyz</a></li>
+                </ul>
+              </div>                            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>        
+  </section><!--/#contact-->
+  
+ 
+
+  <footer id="footer">
+    <div class="footer-top wow fadeInUp" data-wow-duration="800ms" data-wow-delay="300ms">
+      <div class="container text-center">
+        <div class="footer-logo">
+          <a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li><a class="envelope" href="https://plus.google.com/u/0/+GDGBolivia"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> 
+            <li><a class="facebook" href="https://www.facebook.com/GDG.bo/?fref=ts"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>&copy; 2016 GDG CNSE</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="pull-right">Hecho por <a href="https://www.facebook.com/carlitosaracho">TECH TEAM 2016</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAsitT03yx2lVbbmohT_Ewh5ikGNcZUPc&callback=initMap"></script>
+  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/mousescroll.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script type="text/javascript" src="js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/flipclock/libs/prefixfree.min.js"></script>
+  <script src="js/flipclock/flipclock.min.js"></script>
+  <script src="js/mi-script.js"></script>
+</body>
+</html>

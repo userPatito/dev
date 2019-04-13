@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#mi-reloj {
+
+  height: auto;
+  margin: 0px;
+  padding: 20px 0px 0px 0px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  visibility: visible;
+}

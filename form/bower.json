@@ -1,0 +1,29 @@
+{
+  "name": "Form DevFest",
+  "authors": [
+    "Pablo Jordan <diemontes@hotmail.com>"
+  ],
+  "description": "Controla la interaccion con la BD para el DevFest",
+  "main": "registro.html",
+  "keywords": [
+    "form",
+    "bootstrap",
+    "inputfile",
+    "jquery"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "sweetalert": "^1.1.3",
+    "bootstrap-fileinput": "^4.3.5"
+  }
+}

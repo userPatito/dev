@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+	<meta charset="UTF-8">
+	<title>DevFest La Paz</title>
+	<!-- Estilo Bootstrap -->
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet"> 
+	<link href="bower_components/jasny-bootstrap.min.css" rel="stylesheet">  
+	<link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+	<link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet"> 
+	<!-- Plugins -->
+	<script type="node_modules/angular/angular.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>					
+	<script src="bower_components/jasny-bootstrap.min.js"></script>	
+	<script src="scripts/form.js"></script>
+
+</head>
+<body>
+	<div class="button-group">
+		<button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#registro" id="iniciarRegistro"> Regístrate</button>
+	</div>
+
+		<div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+							 <h3>Regístrate para el DevFest 2016</h3>
+							 <h4>Todos los campos con <span style="color:rgb(250, 0, 0)">*</span> son obligatorios</h4>
+						</div> 
+						<div class="modal-body">
+						<form class="form-horizontal form-datos" data-action="//localhost/dev_fest/participantes/registrar" method="POST" enctype="multipart/data-form" >
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-xs-12 col-sm-10">
+										<h3>Información personal</h3>
+									</div>
+									<p style="padding:25px;"></p>
+									<div class="form-group">
+										<label for="nombre" class="col-xs-12 col-sm-4 control-label">Escribe tu nombre <span style="color:rgb(250, 0, 0)">*</span></label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+										</div>
+										<div class="help-block with-errors"></div>
+									</div>
+									<div class="form-group">
+										<label for="apat" class="col-xs-12 col-sm-4 control-label">Escribe tu apellido paterno </label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="text" class="form-control" id="apat" name="apat" placeholder="Tu apellido paterno">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="amat" class="col-xs-12 col-sm-4 control-label">Escribe tu apellido materno</label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="text" class="form-control" id="amat" name="amat" placeholder="Tu apellido materno">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="ci" class="col-xs-12 col-sm-4 control-label">Escribe tu carnet de identidad <span style="color:rgb(250, 0, 0)">*</span></label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="text" class="form-control" id="ci" name="ci" placeholder="Tu carnet de identidad" required>
+										</div>
+									</div>
+									<div class="form-group"> 
+										<label for="mail" class="col-xs-12 col-sm-4 control-label">Escribe tu correo electrónico <span style="color:rgb(250, 0, 0)">*</span></label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="email" class="form-control" id="mail" name="mail" placeholder="Tu correo electrónico" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="cel" class="col-xs-12 col-sm-4 control-label">Escribe tu número de celular</label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="text" class="form-control" id="cel" name="cel" placeholder="Tu número de celular">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="tipo" class="col-xs-12 col-sm-4 control-label">Escoje tu tipo <span style="color:rgb(250, 0, 0)">*</span></label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="radio"  id="estudiante" name="tipo" value="estudiante" required> Estudiante
+											<input type="radio"  id="profesional" name="tipo" value="profesional"> Profesional
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="evento" class="col-xs-12 col-sm-4 control-label">Evento</label>
+										<div class="col-xs-12 col-sm-8">
+											<input type="text" class="form-control" id="evento" name="evento" value="DevFest - 2016" readonly>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="promocion" class="col-xs-12 col-sm-4 control-label">Precio entrada</label>
+										<div class="col-xs-12 col-sm-3">
+											<div class="input-group">
+												<span class="input-group-addon" id="basic-addon1">Bs.</span>
+												<input type="text" class="form-control" id="precio" name="precio" value="0" readonly>
+											</div>
+										</div>
+									</div>
+									
+									<div id="pago">
+										<hr>
+										<div class="col-xs-12 col-sm-10">
+											<h3 class="modal-title">Información de pago</h3>
+										</div>	
+										<p style="padding:20px;"></p>
+										<div class="form-group">
+											<label for="banco" class="col-xs-12 col-sm-4 control-label">Selecciona el banco en el que pagaste <span style="color:rgb(250, 0, 0)">*</span></label>
+											<div class="col-xs-12 col-sm-8">
+												<input type="radio" id="banco" name="banco" value="BNB" required> BNB
+												<input type="radio" id="banco" name="banco" value="Mercantil Santa Cruz"> Mercantil Santa Cruz
+												<input type="radio" id="banco" name="banco" value="BCP"> BCP
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="souvenir" class="col-xs-12 col-sm-4 control-label">¿Deseas algún souvenir?</label>
+											<div class="col-xs-12 col-sm-8">
+												<input type="checkbox" id="taza" name="taza" value="1"> Taza
+												<input type="checkbox" id="polera" name="polera" value="2"> Polera
+											</div>
+										</div>
+										<div class="form-group" id="tallaDiv">
+											<label for="talla" class="col-xs-12 col-sm-4 control-label">Escoja su talla</label>
+											<div class="col-xs-12 col-sm-8">
+												<select id="talla" name="talla">
+													<option value="S">S</option>
+													<option value="M">M</option>
+													<option value="XL">XL</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="souvenir" class="col-xs-12 col-sm-4 control-label">Sube la fotografía de tu recibo <span style="color:rgb(250, 0, 0)">*</span></label>
+											<div class="col-xs-12 col-sm-8">
+												<div class="foto-block">
+			                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+			                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 250px; height: 200px;">
+			                                            <img src="">
+			                                        </div>
+			                                        <div>
+			                                            <span class="btn btn-default btn-file btn-block">
+			                                                <span class="fileinput-new">Seleccionar imagen</span>
+			                                                <span class="fileinput-exists">Cambiar</span>
+			                                                <input type="file" id="foto" name="foto" class="fotografia" id="foto" required>
+			                                                <input type="hidden" name="img_bd" id="img_bd" value="">
+			                                            </span>
+			                                            <a href="#" class="btn btn-default btn-block fileinput-exists" data-dismiss="fileinput">Remover imagen</a>
+			                                        </div>
+			                                    </div>
+			                                </div>
+                                       		 </div>
+										</div>
+										<div class="form-group">
+											<label for="recibo" class="col-xs-12 col-sm-4 control-label">Código de recibo <span style="color:rgb(250, 0, 0)">*</span></label>
+											<div class="col-xs-12 col-sm-6">
+												<input type="text" class="form-control" id="recibo" name="recibo" required>
+											</div>
+										</div>
+										<div class="modal-footer">
+										<div class="row">
+											<div class="col-xs-8" >
+												<strong class="text-center">Total a pagar: Bs. <span id="total"> 0</span> </strong>
+											</div>
+											<div class="col-xs-12">	
+												<button type="button" class="btn btn-primary btn-block" id="subirRegistro"><i class="fa fa-check-circle-o"></i> Regístrate</button>
+												<button type="button" class="btn btn-secondary btn-block" data-dismiss="modal"> Cerrar</button>
+											</div>
+										</div>
+									</div>
+									</div>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>	
+</body>
+</html>

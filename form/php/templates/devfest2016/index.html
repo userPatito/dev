@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>DevFest 2016</title>
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/devfest2016.css">
+    <link rel="stylesheet" href="assets/css/registro.css">
+</head>
+<body>
+<div class="registro">
+    <form class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label for="nombre" class="label-registro">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control input-registro">
+                </div>
+                <div class="form-group">
+                    <label for="apellidos" class="label-registro">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos" class="form-control input-registro">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_nacimiento" class="label-registro">Fecha de Nacimiento</label>
+                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control input-registro">
+                </div>
+                <div class="form-group">
+                    <label for="mail" class="label-registro">E-mail</label>
+                    <input type="email" name="mail" id="mail" class="form-control input-registro">
+                </div>
+                <div class="form-group">
+                    <label for="fono" class="label-registro">Nro. de Contacto</label>
+                    <input type="text" name="fono" id="fono" class="form-control input-registro">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="ticket-container">
+                    <div class="ticket">
+                        <div class="round-ticket"></div>
+                        <div class="body-ticket">
+                            <h2 class="price-ticket">35 Bs.</h2>
+                            <hr class="line-ticket">
+                            <small>Requisito un ID de estudiante</small>
+                            <div class="souvenir-ticket">
+                                <div class="taza">
+                                    <small>Taza</small>
+                                    <div class="input-group input-group-sm">
+
+                                        <input type="number" min="0" value="0" readonly class="form-control">
+                                        <span class="input-group-addon btn"><i class="fa fa-plus"></i></span>
+                                        <span class="input-group-addon btn"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </div>
+                                <div class="polera">
+                                    <small>Polera</small>
+                                    <div class="input-group input-group-sm">
+
+                                        <input type="number" min="0" value="0" readonly class="form-control">
+                                        <!--<div class="input-group-btn">-->
+                                            <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>-->
+                                            <!--<ul class="dropdown-menu">-->
+                                                <!--<li><a>S</a></li>-->
+                                                <!--<li><a>M</a></li>-->
+                                                <!--<li><a>L</a></li>-->
+                                                <!--<li><a>XL</a></li>-->
+                                            <!--</ul>-->
+                                        <!--</div>&lt;!&ndash; /btn-group &ndash;&gt;-->
+                                        <span class="input-group-addon">
+                                            <select name="" id="" class="">
+                                                <option value="S">S</option>
+                                                <option value="M">M</option>
+                                                <option value="L">L</option>
+                                                <option value="XL">XL</option>
+                                            </select>
+                                        </span>
+                                        <span class="input-group-addon btn"><i class="fa fa-plus"></i></span>
+                                        <span class="input-group-addon btn"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select-ticket">
+                                <small>Tipo de Ticket</small>
+                                <div class="btn-group btn-group-sm btn-block" data-toggle="buttons">
+                                    <label class="btn btn-default active">
+                                        <input type="radio" name="tipo_ticket" id="option1" checked> Estudiante
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="tipo_ticket" id="option2"> Profesional
+                                    </label>
+                                </div>
+                                <!--<select name="tipo-ticket" id="tipo-ticke" class="form-control input-sm">-->
+                                    <!--<option value="Estudiante">Estudiante</option>-->
+                                    <!--<option value="Profesional">Profesional</option>-->
+                                <!--</select>-->
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="type-ticket">
+                            <h3>Profesional</h3>
+                            <!--<div class="clearfix"></div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="btn btn-default">Quiero Reservar</button>
+                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#modal-deposito">Ya Deposite</button>
+                </div>
+            </div>
+            <!-- Modal Deposito -->
+            <div class="modal fade" id="modal-deposito" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            <hr class="line-ticket">
+                            <div class="form-group text-center">
+                                <small>Banco</small>
+                                <div class="btn-group btn-group-sm btn-block" style="width: 230px; margin: 0 auto; display:block;" data-toggle="buttons">
+                                    <label class="btn btn-default active">
+                                        <input type="radio" name="banco" checked> BNB
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="banco"> Banco Union
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="banco"> BCP
+                                    </label>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group text-center">
+                                <small>Nro. de Deposito</small>
+                                <input type="text" name="nro_deposito" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <small>Fotografia del Comprobante</small>
+                                <div class="foto-block">
+                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 230px; height: 270px;">
+                                            <img src="">
+                                        </div>
+                                        <div>
+                                            <span class="btn btn-default btn-file btn-block">
+                                                <span class="fileinput-new">Seleccionar imágen</span>
+                                                <span class="fileinput-exists">Cambiar</span>
+                                                <input type="file" name="foto" class="fotografia" id="foto">
+                                                <input type="hidden" name="img" id="foto_bd" value="">
+                                            </span>
+                                            <!--                                        <a href="#" class="btn btn-default btn-block fileinput-exists" data-dismiss="fileinput">Remover</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary btn-sm">Guardar Cambios</button>
+                        </div>
+                        <!--<div class="modal-footer">-->
+                            <!---->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div> <!-- Fin de Modal Deposito -->
+        </div>
+    </form>
+</div>
+<a class="abrir-registro">Abrir registro</a>
+<div class="header-devfest">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">DevFest</a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">TEMAS</a></li>
+                    <li><a href="#">CODELABS</a></li>
+                    <li><a href="#">SPEAKERS</a></li>
+                    <li><a href="#">EMPRENDIMIENTOS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>DevFest 2016</h1>
+        <p>El mejor y mas grande evento del año, organizado por desarrolladores para desarrolladores en La Paz Bolivia</p>
+        <div class="btn btn-primary">Contactanos</div>
+        <div class="btn btn-primary">Registrarse</div>
+    </div>
+</div>
+<section class="temas" style="background: #F6F6F6">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center">Temas</h2>
+                <div class="timeline">
+                    <div class="tm-body">
+                        <div class="tm-title">
+                            <h3 class="h5 text-uppercase">November 2013</h3>
+                        </div>
+                        <ol class="tm-items">
+                            <li>
+                                <div class="tm-info">
+                                    <div class="tm-icon"><i class="fa fa-star"></i></div>
+                                    <time class="tm-datetime" datetime="2013-11-22 19:13">
+                                        <div class="tm-datetime-date">7 months ago.</div>
+                                        <div class="tm-datetime-time">07:13 PM</div>
+                                    </time>
+                                </div>
+                                <div class="tm-box appear-animation fadeInRight appear-animation-visible" data-appear-animation="fadeInRight" data-appear-animation-delay="100" style="animation-delay: 100ms;">
+                                    <p>It's awesome when we find a good solution for our projects, Porto Admin is <span class="text-primary">#awesome</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tm-info">
+                                    <div class="tm-icon"><i class="fa fa-thumbs-up"></i></div>
+                                    <time class="tm-datetime" datetime="2013-11-19 18:13">
+                                        <div class="tm-datetime-date">7 months ago.</div>
+                                        <div class="tm-datetime-time">06:13 PM</div>
+                                    </time>
+                                </div>
+                                <div class="tm-box appear-animation fadeInRight appear-animation-visible" data-appear-animation="fadeInRight" data-appear-animation-delay="250" style="animation-delay: 250ms;">
+                                    <p>
+                                        What is your biggest developer pain point?
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tm-info">
+                                    <div class="tm-icon"><i class="fa fa-map-marker"></i></div>
+                                    <time class="tm-datetime" datetime="2013-11-14 17:25">
+                                        <div class="tm-datetime-date">7 months ago.</div>
+                                        <div class="tm-datetime-time">05:25 PM</div>
+                                    </time>
+                                </div>
+                                <div class="tm-box appear-animation fadeInRight appear-animation-visible" data-appear-animation="fadeInRight" data-appear-animation-delay="400" style="animation-delay: 400ms;">
+                                    <p>
+                                        <a href="#">John Doe</a> is reading a book at <span class="text-primary">New York Public Library</span>
+                                    </p>
+
+                                    <div class="tm-meta">
+											<span>
+												<i class="fa fa-user"></i> By <a href="#">John Doe</a>
+											</span>
+											<span>
+												<i class="fa fa-comments"></i> <a href="#">9 Comments</a>
+											</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="codelabs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center">Codelabs</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="speakers">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center">Speakers</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="box-speaker">
+                    <div class="speaker-data">
+                        <figure>
+                            <img src="assets/imgs/speakers/speaker1.png" class="img-responsive" alt="">
+                        </figure>
+                        <div class="speaker-name">
+                            <h4>Jhon Doe</h4>
+                            <p>Web Developer, <strong>Bolivia</strong></p>
+                        </div>
+                    </div>
+                    <div class="speaker-description">
+                        <p>Web developer expert, con skills en Android, Firebase, Polymer, Angular, React JS, y otras tecnologias de desarrollo</p>
+                    </div>
+                    <div class="speaker-social">
+                        <ul>
+                            <li><a href="fb.com/jhondoe" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="twitter.com/jhondoe" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="youtube.com/jhondoe" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="box-speaker">
+                    <div class="speaker-data">
+                        <figure>
+                            <img src="assets/imgs/speakers/speaker1.png" class="img-responsive" alt="">
+                        </figure>
+                        <div class="speaker-name">
+                            <h4>Jhon Doe</h4>
+                            <p>Web Developer, <strong>Bolivia</strong></p>
+                        </div>
+                    </div>
+                    <div class="speaker-description">
+                        <p>Web developer expert, con skills en Android, Firebase, Polymer, Angular, React JS, y otras tecnologias de desarrollo</p>
+                    </div>
+                    <div class="speaker-social">
+                        <ul>
+                            <li><a href="fb.com/jhondoe" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="twitter.com/jhondoe" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="youtube.com/jhondoe" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="box-speaker">
+                    <div class="speaker-data">
+                        <figure>
+                            <img src="assets/imgs/speakers/speaker1.png" class="img-responsive" alt="">
+                        </figure>
+                        <div class="speaker-name">
+                            <h4>Jhon Doe</h4>
+                            <p>Web Developer, <strong>Bolivia</strong></p>
+                        </div>
+                    </div>
+                    <div class="speaker-description">
+                        <p>Web developer expert, con skills en Android, Firebase, Polymer, Angular, React JS, y otras tecnologias de desarrollo</p>
+                    </div>
+                    <div class="speaker-social">
+                        <ul>
+                            <li><a href="fb.com/jhondoe" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="twitter.com/jhondoe" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="youtube.com/jhondoe" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="box-speaker">
+                    <div class="speaker-data">
+                        <figure>
+                            <img src="assets/imgs/speakers/speaker1.png" class="img-responsive" alt="">
+                        </figure>
+                        <div class="speaker-name">
+                            <h4>Jhon Doe</h4>
+                            <p>Web Developer, <strong>Bolivia</strong></p>
+                        </div>
+                    </div>
+                    <div class="speaker-description">
+                        <p>Web developer expert, con skills en Android, Firebase, Polymer, Angular, React JS, y otras tecnologias de desarrollo</p>
+                    </div>
+                    <div class="speaker-social">
+                        <ul>
+                            <li><a href="fb.com/jhondoe" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="twitter.com/jhondoe" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="youtube.com/jhondoe" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="emprendimientos">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center">Emprendimientos</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="auspciadores">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center">Auspiciadores</h2>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jasny-bootstrap.min.js"></script>
+<script src="assets/js/dev.js"></script>
+</html>
